@@ -30,6 +30,18 @@ contract WanderTokenPol is Initializable, ERC20PresetMinterPauserUpgradeable {
         uint numConfirmations;
     }
 
+    // Required Modifiers and Involving Function Acting as Modifiers
+    function callerConfirmed(uint _reqIndex) public view virtual returns(uint){
+        _onlyAdmin();
+        uint index = 100;   // Error counter, if it returns 100, then the address has not confirmed
+        for (uint i; i< requests[_reqIndex].confirmedAddress.length;i++){
+          if (requests[_reqIndex].confirmedAddress[i] == msg.sender){
+              index = i;
+              break;
+          }
+        }
+        return index;   // Return the index of the caller's address in the requests' array of confirm addresses
+    }
     function _onlyAdmin() private view {
         require(hasRole(DEFAULT_ADMIN_ROLE, msg.sender), "not admin");
     }
@@ -43,22 +55,9 @@ contract WanderTokenPol is Initializable, ERC20PresetMinterPauserUpgradeable {
         require(requests[_reqIndex].numConfirmations >= numConfirmationsRequired, "lack the required num of confirmations");
     }
 
-    // Required Modifiers and Involving Function Acting as Modifiers
-    function callerConfirmed(uint _reqIndex) public view virtual returns(uint){
-        _onlyAdmin();
-        uint index = 100;   // Error counter, if it returns 100, then the address has not confirmed
-        for (uint i; i< requests[_reqIndex].confirmedAddress.length;i++){
-          if (requests[_reqIndex].confirmedAddress[i] == msg.sender){
-              index = i;
-              break;
-          }
-        }
-        return index;   // Return the index of the caller's address in the requests' array of confirm addresses
-    }
-
     // // Replacement to Constructor
     function initialize(address[] memory _admins, uint _numConfirmationsRequired) public initializer {
-        __ERC20_init("WANDER", "pWANDER");
+        __ERC20_init("Wanderverse Token", "WANDER");
         MAXSUPPLY = 1000000000 * 10 ** 18;
         require(_admins.length > 0, "more than 1 owner is required");
         require(_numConfirmationsRequired > 0 && _numConfirmationsRequired <= _admins.length, "invalid number of confirmations");

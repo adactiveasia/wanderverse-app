@@ -32,4 +32,4 @@ To run the code, users are required to install couple of packages. The list of p
 - @openzeppelin (enter "npm install @openzeppelin/contracts" in your terminal)
 - hdwallet-provider: Used to deploy/migrate the smart contract into the blockchain. Not compulsary for truffle testing sake (enter "npm install @truffle/hdwallet-provider in your terminal)
 - chai: Used for truffle testing (enter "npm install chai")
-- chai-as-promised: Used for truffle testing (enter "npm install chai-as-promised"
+- chai-as-promised: Used for truffle testing (enter "npm install chai-as-promised")
