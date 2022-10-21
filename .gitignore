@@ -7,6 +7,7 @@
 
 # testing
 /coverage
+/test
 
 # production
 /build
@@ -25,6 +26,7 @@
 /src/components/
 /src/testing_contracts/
 /src/test/
+/src/abis/
 
 # admin console
 
