@@ -17,10 +17,13 @@
   <img src="public/gitHub_images/Screenshot_Walk_3.png" width="170"></img>
   <img src="public/gitHub_images/Screenshot_Walk_4.png" width="170"></img>
 </div>
+<div align="center">
+  <img src="public/Smart-Contract-color-for-white.png" width="170"></img>
+</div>
 
 
 # Project Status
-The $WANDER token smart contract has all the necessary functions required to be classified as an upgradable ERC20 token, but incorporated with an additional layer of multi-signature requirement to conduct adminstrator functions that play significant role to the circulation of $WANDER token. Tests have been provided not just to accomodate the functions that are inside the $WANDER token smart contract, but also to test whether if upgrading the smart contract is something possible to be done. Documentations in regard to the token's smart contract details can be found in the following section (Specs). The tokenomics of the token has been established, which is discussed in $WANDER token's [whitepaper](https://wanderverseapp.gitbook.io/wander-token-whitepaper/) that is available to the public. All that's left is just a proper auditing process before the token is ready to be deployed.
+The $WANDER token smart contract has all the necessary functions required to be classified as an upgradable ERC20 token, but incorporated with an additional layer of multi-signature requirement to conduct adminstrator functions that play significant role to the circulation of $WANDER token. Tests have been provided not just to accomodate the functions that are inside the $WANDER token smart contract, but also to test whether if upgrading the smart contract is something possible to be done. Documentations in regard to the token's smart contract details can be found in the following section (Specs). The tokenomics of the token has been established, which is discussed in $WANDER token's [whitepaper](https://wanderverseapp.gitbook.io/wander-token-whitepaper/) that is available to the public. The token smart contract has been audited by [Hacken](https://hacken.io/) and has received a full mark of 10/10, the details of the audit report can be insepected through this [link](https://hacken.io/audits/#wanderverse).
 
 # Getting Started
 The following list depicts the recommended version of different packages to run the smart contract:
